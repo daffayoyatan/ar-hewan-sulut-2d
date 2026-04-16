@@ -4,7 +4,7 @@
   <title>AR Hewan Sulawesi Utara</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Library -->
+  <!-- Library A-Frame & AR.js -->
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/ar.js@3.3.2/aframe/build/aframe-ar.js"></script>
 </head>
@@ -13,7 +13,17 @@
 
   <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
 
-    <!-- Tarsius -->
+    <!-- ========================= -->
+    <!-- 🔴 TEST MARKER (WAJIB ADA) -->
+    <!-- ========================= -->
+    <a-marker preset="hiro">
+      <a-box color="red" position="0 0.5 0"></a-box>
+      <a-text value="TEST BERHASIL" position="0 1 0" align="center"></a-text>
+    </a-marker>
+
+    <!-- ========================= -->
+    <!-- 🐾 Tarsius -->
+    <!-- ========================= -->
     <a-marker type="pattern" url="marker/tarsius.patt">
       <a-image 
         src="images/tarsius.png"
@@ -24,7 +34,9 @@
       <a-text value="Tarsius" position="0 1 0" align="center"></a-text>
     </a-marker>
 
-    <!-- Anoa -->
+    <!-- ========================= -->
+    <!-- 🐾 Anoa -->
+    <!-- ========================= -->
     <a-marker type="pattern" url="marker/anoa.patt">
       <a-image 
         src="images/anoa.png"
@@ -35,7 +47,9 @@
       <a-text value="Anoa" position="0 1 0" align="center"></a-text>
     </a-marker>
 
-    <!-- Maleo -->
+    <!-- ========================= -->
+    <!-- 🐾 Maleo -->
+    <!-- ========================= -->
     <a-marker type="pattern" url="marker/maleo.patt">
       <a-image 
         src="images/maleo.png"
@@ -46,9 +60,10 @@
       <a-text value="Maleo" position="0 1 0" align="center"></a-text>
     </a-marker>
 
+    <!-- Kamera -->
     <a-entity camera></a-entity>
 
   </a-scene>
 
 </body>
-</html> 
+</html>
